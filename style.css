@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-Blue: hsl(223, 87%, 63%);
+  --clr-Pale-Blue: hsl(223, 100%, 88%);
+  --clr-Light-Red: hsl(354, 100%, 66%);
+  --clr-Gray: hsl(0, 0%, 59%);
+  --clr-Very-Dark-Blue: hsl(209, 33%, 12%);
+  --ff1-font-family: "Libre Franklin", sans-serif;
+}
+
+body {
+  display: flex;
+  font-family: var(--ff1-font-family);
+}
+
+.wrapper {
+  width: 100%;
+  text-align: center;
+}
+
+.image-svg img {
+  max-width: 38rem;
+  margin-top: 4rem;
+  margin-bottom: 3.7rem;
+}
+
+.Ping-svg {
+  margin-top: 3.5rem;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: 300;
+  color: var(--clr-Gray);
+  margin-bottom: 1.2rem;
+}
+
+.soon-heading {
+  color: black;
+  font-weight: 700;
+}
+
+.description {
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+input {
+  width: 28%;
+  height: 3.2rem;
+  padding-left: 1.3rem;
+  border-radius: 1.5rem;
+  border: 2px solid lightgrey;
+}
+
+.Notify-btn {
+  cursor: pointer;
+  border: none;
+  margin-left: 1.5rem;
+  height: 3.2rem;
+  width: 12%;
+  color: white;
+  background: var(--clr-Blue);
+  border-radius: 1.8rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.Notify-btn:hover {
+  background: darkblue;
+}
+
+.error p {
+  text-align: left;
+  margin: 0 auto;
+  width: 31rem;
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: red;
+  font-style: italic;
+  margin-top: 5px;
+}
+
+.instagram img,
+.facebook img,
+.twitter img {
+  cursor: pointer;
+  width: 30px;
+  color: blue;
+}
+
+.icons img:hover {
+  background: var(--clr-Pale-Blue);
+  border-radius: 50%;
+}
+
+.icons a {
+  padding: 0.4rem;
+}
+
+.icons {
+  margin-bottom: 1.5rem;
+}
+
+.copyright {
+  font-size: 0.7rem;
+  color: lightgrey;
+}
+
+@media (max-width: 475px) {
+  body {
+    display: block;
+  }
+
+  .input-button {
+    display: block;
+  }
+
+  input {
+    width: 80%;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .error p {
+    position: relative;
+    top: -5rem;
+    right: -3rem;
+  }
+
+  .Notify-btn {
+    width: 80%;
+  }
+
+  .image-svg img {
+    max-width: 26rem;
+  }
+
+  .copyright {
+    margin-bottom: 2rem;
+  }
+}

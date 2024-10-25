@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>My Solution | Ping coming soon page</title>
+  </head>
+  <body>
+    <main class="wrapper">
+      <div class="Ping-svg">
+        <img src="./images/logo.svg" alt="" />
+      </div>
+      <div class="main-heading">
+        <h2>We are launching <span class="soon-heading"> soon! </span></h2>
+      </div>
+      <div class="description">
+        <p>Subscribe and get notified</p>
+      </div>
+      <div class="input-button">
+        <input
+          type="text"
+          placeholder="Your email address..."
+          id="input-email"
+        />
+        <button id="Notify-btn" class="Notify-btn">Notify Me</button>
+      </div>
+      <div class="error" id="error" style="display: none; color: red">
+        <p>Please provide a valid email address</p>
+      </div>
+      <div class="image-svg">
+        <img src="./images/illustration-dashboard.png" alt="" />
+      </div>
+      <div class="icons">
+        <a href="https://www.facebook.com" class="facebook">
+          <img src="./images/facebook.svg" alt="facebook" />
+        </a>
+        <a href="https://x.com" class="twitter">
+          <img src="./images/twitter.svg" alt="twitter" />
+        </a>
+        <a href="https://www.instagram.com" class="instagram">
+          <img src="./images/instagram.svg" alt="instagram" />
+        </a>
+      </div>
+
+      <div class="copyright">
+        <p>&copy; Copyright Ping. All rights reserved.</p>
+      </div>
+    </main>
+
+    <script>
+      const emailInput = document.getElementById("input-email");
+      const notifyBtn = document.getElementById("Notify-btn");
+      const errorMessage = document.getElementById("error");
+
+      // Sprawdzenie Email
+      notifyBtn.addEventListener("click", function () {
+        const emailValue = emailInput.value.trim();
+        if (emailValue === "" || !validateEmail(emailValue)) {
+          errorMessage.style.display = "block"; // Pokazuje komunikat błędu
+          emailInput.style.borderColor = "red";
+        } else {
+          errorMessage.style.display = "none"; // Ukrywa komunikat, jeśli poprawny email
+          emailInput.style.borderColor = "lightgrey";
+        }
+      });
+
+      // Funkcja do walidacji adresu email
+      function validateEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(String(email).toLowerCase());
+      }
+    </script>
+  </body>
+</html>
